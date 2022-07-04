@@ -128,6 +128,6 @@ class _ProfileState extends State<Profile> {
 savedata() async{
 print(_tcontroller.text);
 this.sharepref = await SharedPreferences.getInstance();
-this.sharepref?.setString('save_val', _tcontroller.text);
+this.sharepref?.setString('save_vall', _tcontroller.text); 
 }
 }
