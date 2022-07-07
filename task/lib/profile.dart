@@ -116,18 +116,19 @@ class _ProfileState extends State<Profile> {
      ElevatedButton(onPressed:(){
       savedata();
       }, child: const Text('Submit'),  ),
-      ElevatedButton(onPressed:(close),
-       child: const Text('close'),  )
+      // ElevatedButton(onPressed:(close),
+      //  child: const Text('close'),  )
   ],
   )
   );
-  void close(){
-   Navigator.of(this.context).pop(_tcontroller.text);
- } 
+//   void close(){
+//    Navigator.of(this.context).pop(_tcontroller.text);
+//  } 
 
 savedata() async{
 print(_tcontroller.text);
 this.sharepref = await SharedPreferences.getInstance();
 this.sharepref?.setString('save_val', _tcontroller.text); 
+ Navigator.of(this.context).pop(_tcontroller.text);
 }
 }
